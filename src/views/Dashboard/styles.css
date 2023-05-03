@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.dashboard {
+    width: 1048px;
+    left: 191px;
+    top: 18px;
+    border-radius: 5px;
+    height: 100vh;
+}
+.BombFinanceSummary {
+    height: 289px;
+    width: 1042px;
+    left: 191px;
+    top: 18px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.BombFinanceSummaryContents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+.BombFinanceSummaryContentsRIGHT {
+    height: 280px;
+    box-sizing: border-box;
+}
+.BombFinanceSummaryContentsRIGHT > * {
+    /* This applies the following styles to all children elements of the div */
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .currentEpoch{
+    display: flex; 
+    justify-content: center;
+    margin: 10px;
+  }
+  span {
+    color:rgba(0, 232, 162, 1);
+  }
+.InvestNow {
+    height: 134.4px;
+    width: 640px;
+    left: 196px;
+    top: 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.LatestNews {
+    height: 338px;
+    width: 392px;
+    left: 0px;
+    top: 0px;
+    border-radius: 10px;
+    float: right;
+}
+.BoardRoom {
+    height: 202px;
+    width: 640px;
+    left: 196px;
+    top: 463px;
+    border-radius: 10px;
+    float: left;
+}
+.BombFarms {
+    height: 377.2513732910156px;
+    width: 1042px;
+    left: 196px;
+    top: 685px;
+    border-radius: 10px;
+}
+.Bonds {
+    height: 186px;
+    width: 1042px;
+    left: 197px;
+    top: 1082px;
+    border-radius: 10px;
+}
+
+.dash {
+    text-align: center;
+}
+.investAndLatestNews {
+    display: flex !important;
+}
+
+.marginForAll {
+    margin: 3px;
+    background-color:rgba(35, 40, 75, 0.75);
+    /* background: linear-gradient(0deg, rgba(35, 40, 75, 0.75), rgba(35, 40, 75, 0)),
+    linear-gradient(0deg, #728CDF, #728CDF); */
+    backdrop-filter: blur(1px);
+    border: 1px solid #728CDF;
+}
+.ReadInvestmentStrategy {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* text-align: right; */
+    height: 35px;
+
+}
+.ReadInvestmentStrategyText {
+    color:  #9EE6FF;
+    text-decoration: underline;
+}
+.invest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-sizing: border-box; */
+    height: 35px;
+    text-align: center;
+    background: radial-gradient(59345.13% 4094144349.28% at 39511.5% -2722397851.45%, rgba(0, 245, 171, 0.5) 0%, rgba(0, 173, 232, 0.5) 100%);
+    border: 0.5px solid #E41A1A;
+}
+.investText {
+    font-size: 25px;
+    color: white;
+}
+.chatAndRead{
+    display: flex;
+    /* width: 300px; */
+    justify-content: space-between;
+    /* background: linear-gradient(0deg, #728CDF, #728CDF),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)); */
+    height: 35px;
+
+}
+.chatAndReadDocs{
+    background: linear-gradient(0deg, #728CDF, #728CDF),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    opacity: 0.5;
+    width: 310px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    height: 25px;
+    width: 25px;
+}
+
+hr{
+    width: 90%;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+}
