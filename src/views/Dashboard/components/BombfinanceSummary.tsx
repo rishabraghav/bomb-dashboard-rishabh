@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles.css";
+import useCurrentEpoch from '../../../hooks/useCurrentEpoch';
 
 const BombFinanceSummary = () => {
+    const currentEpoch = useCurrentEpoch();
     return (
         <div className="BombFinanceSummary marginForAll">
             <div className="BombFinanceSummaryHeading">
@@ -14,7 +16,7 @@ const BombFinanceSummary = () => {
                 </div>
                 <div className="BombFinanceSummaryContentsRIGHT">
                     <p className="currentEpoch">Current Epoch</p>
-                    <p className="currentEpoch" style={{fontSize: "30px", fontWeight: "bold"}}>258</p>
+                    <p className="currentEpoch" style={{fontSize: "30px", fontWeight: "bold"}}>{Number(currentEpoch)}</p>
                     <hr />
                     <p className="currentEpoch" style={{fontSize: "30px", fontWeight: "bold"}}>03:38:36</p>
                     <p className="currentEpoch">Next Epoch in</p>
