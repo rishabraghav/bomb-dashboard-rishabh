@@ -15,15 +15,15 @@ import usebShareStats from '../../../hooks/usebShareStats';
 const BombFinanceSummary = () => {
     const currentEpoch = useCurrentEpoch();
     const tvl = useTotalValueLocked();
-    const lastTWAP = useCashPriceInLastTWAP();
+    const prevCashStat = useCashPriceInLastTWAP();
     const bombStats = useBombStats();
     const bondStats = useBondStats();
-    const liveTWAP = useCashPriceInEstimatedTWAP();
+    const cashStat = useCashPriceInEstimatedTWAP();
     const bshareStats = usebShareStats();
 
     const { to } = useTreasuryAllocationTimes();
-
-
+    const lastTWAP = React.useMemo(() => (prevCashStat? Number(prevCashStat) : null), [prevCashStat]);
+    const liveTWAP = React.useMemo(() => (cashStat ? Number(cashStat.priceInDollars).toFixed(4) : null), [cashStat]);
     const usdToBtcRate = 0.000032; // hardcoded exchange rate
     // const usdAmount = 100; // amount in USD to convert
     // const btcAmount = usdAmount * usdToBtcRate;  // this approach is not recommended for production use as exchange rates can fluctuate rapidly and may become outdated quickly.
@@ -40,9 +40,9 @@ const BombFinanceSummary = () => {
             <div className="BombFinanceSummaryContents">
                 <div className="BombFinanceSummaryContentsLEFT">
                     <div className="supplies rows">
-                        <p className="currentSupply summaryData">current supply</p>
-                        <p className="totalSupply summaryData">total supply</p>
-                        <p className="price summaryData">price</p>
+                        <p className="currentSupply summaryData">Current Supply</p>
+                        <p className="totalSupply summaryData">Total Supply</p>
+                        <p className="price summaryData">Price</p>
                     </div>
                     <hr />
                     <div className="bombPrice rows">
@@ -88,9 +88,9 @@ const BombFinanceSummary = () => {
                     </p>
                     <p className="currentEpoch">Next Epoch in</p>
                     <hr />
-                    <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>Live TWAP: <span>{liveTWAP? liveTWAP.totalSupply : "0"}</span></p>
+                    <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>Live TWAP: <span>{liveTWAP}</span></p>
                     <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>TVL: <span> ${tvl}</span></p> 
-                    <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>Last Epoch TWAP: <span> {Number(lastTWAP)}</span></p>
+                    <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>Last Epoch TWAP: <span> {lastTWAP}</span></p>
                 </div>
             </div>
         </div>

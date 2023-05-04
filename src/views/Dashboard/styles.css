@@ -29,6 +29,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* align-items: center; */
     color: white;
     padding: 0 10px 1px 12px;
     margin: 0 3px 1px 12px;
@@ -77,6 +78,8 @@ hr{
     color: white;
     padding: 1px 4px 1px 4px;
     margin: 0 6px 0 6px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 4px rgba(0, 255, 47, 0.498);
 }
 .rows{
     display: flex;
@@ -138,11 +141,36 @@ hr{
 }
 .boardroomHeadings{
     height: 70px;
+    padding-bottom: 8px;
+}
+.boardroomStats{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
 }
 .boardroomStatsAndFunctions{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+.boardroomFunctions{
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 2px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    font-size: 16px;
+    margin: 6px 4px;
+    cursor: pointer;
+    border-radius: 20px;
+    /* display: flex;
+    align-items: center; */
 }
 .BombFarms {
     height: 377.2513732910156px;
