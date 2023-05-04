@@ -8,6 +8,7 @@ import './styles.css';
 import { createGlobalStyle } from 'styled-components';
 import HomeImage from '../../assets/img/background.jpg';
 import BoardRoom from "./components/BoardRoom";
+
 const BackgroundImage = createGlobalStyle`
   body {
     background: url(${HomeImage}) repeat !important;
@@ -15,9 +16,6 @@ const BackgroundImage = createGlobalStyle`
     background-color: #171923;
   }
 `;
-
-const TITLE = 'bomb.money | Farms';
-
 
 const Dashboard = () => {
     return (
