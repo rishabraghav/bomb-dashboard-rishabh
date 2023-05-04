@@ -30,6 +30,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     color: white;
+    padding: 0 10px 1px 12px;
+    margin: 0 3px 1px 12px;
 }
 .BombFinanceSummaryContentsRIGHT {
     height: 280px;
