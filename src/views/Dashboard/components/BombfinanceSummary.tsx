@@ -14,7 +14,7 @@ import usebShareStats from '../../../hooks/usebShareStats';
 
 const BombFinanceSummary = () => {
     const currentEpoch = useCurrentEpoch();
-    const tvl = useTotalValueLocked();
+    const tvl =  useTotalValueLocked();
     const prevCashStat = useCashPriceInLastTWAP();
     const bombStats = useBombStats();
     const bondStats = useBondStats();
@@ -27,9 +27,7 @@ const BombFinanceSummary = () => {
     const usdToBtcRate = 0.000032; // hardcoded exchange rate
     // const usdAmount = 100; // amount in USD to convert
     // const btcAmount = usdAmount * usdToBtcRate;  // this approach is not recommended for production use as exchange rates can fluctuate rapidly and may become outdated quickly.
-
-
-
+   
 
     return (
         <div className="BombFinanceSummary marginForAll">
@@ -89,7 +87,7 @@ const BombFinanceSummary = () => {
                     <p className="currentEpoch">Next Epoch in</p>
                     <hr />
                     <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>Live TWAP: <span>{liveTWAP}</span></p>
-                    <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>TVL: <span> ${tvl}</span></p> 
+                    <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>TVL: <span> ${tvl.toFixed(2)}</span></p> 
                     <p className="currentEpoch" style={{fontSize: "10px", fontWeight: "lighter"}}>Last Epoch TWAP: <span> {lastTWAP}</span></p>
                 </div>
             </div>

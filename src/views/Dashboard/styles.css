@@ -201,6 +201,7 @@ hr{
     linear-gradient(0deg, #728CDF, #728CDF); */
     backdrop-filter: blur(1px);
     border: 1px solid #728CDF;
+    padding: 1px 10px;
 }
 .ReadInvestmentStrategy {
     display: flex;
@@ -223,6 +224,10 @@ hr{
     text-align: center;
     background: radial-gradient(59345.13% 4094144349.28% at 39511.5% -2722397851.45%, rgba(0, 245, 171, 0.5) 0%, rgba(0, 173, 232, 0.5) 100%);
     border: 0.5px solid #E41A1A;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 .investText {
     font-size: 25px;
@@ -259,4 +264,7 @@ hr{
 }
 h1 {
     text-align: center;
+}
+.BombFarms{
+    
 }

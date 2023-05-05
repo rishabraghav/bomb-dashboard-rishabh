@@ -8,7 +8,8 @@ import './styles.css';
 import { createGlobalStyle } from 'styled-components';
 import HomeImage from '../../assets/img/background.jpg';
 import BoardRoom from "./components/BoardRoom";
-
+// import Nav from '../../components/Nav';
+// import Footer from '../../components/Footer';
 const BackgroundImage = createGlobalStyle`
   body {
     background: url(${HomeImage}) repeat !important;
@@ -18,8 +19,9 @@ const BackgroundImage = createGlobalStyle`
 `;
 
 const Dashboard = () => {
-    return (
+    return (  
         <div className="dashboard">
+        {/* <Nav /> */}
         <BackgroundImage />
         <h1 className="dash"> dashboard</h1>
         <BombFinanceSummary />
@@ -33,6 +35,7 @@ const Dashboard = () => {
         <BombFarms />
         <Bonds />
         </div>
+
     );
     
 };
