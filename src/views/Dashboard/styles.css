@@ -60,7 +60,7 @@ body {
     font-size: 25px;
     color: white;
     /* text-align: center; */
-    margin: 5px;
+    margin: 3px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -266,5 +266,6 @@ h1 {
     text-align: center;
 }
 .BombFarms{
-    
+    margin: 0;
+    padding: 1px 10px;
 }
