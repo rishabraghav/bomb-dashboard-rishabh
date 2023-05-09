@@ -3,13 +3,19 @@ import useWithdrawFromBomb from "../../../hooks/useWithdrawFromBomb";
 import useStakedBombBalance from '../../../hooks/useStakedBombBalance';
 import { getDisplayBalance } from '../../../utils/formatBalance';
 import useTotalValueLocked from '../../../hooks/useTotalValueLocked';
+import useStakeToBomb from '../../../hooks/useStakeToBomb';
 
 
 const BombFarms = () => {
     const {onWithdraw} = useWithdrawFromBomb();
     const stackedBomb = useStakedBombBalance();
     const tvl = useTotalValueLocked();
+    const {onStake} = useStakeToBomb();
 
+    const handleDepositClick = () => {
+        const amount = prompt("Enter an amount");
+        onStake(amount);
+    }
     const handleWithdrawBomb = () => {
         const amount = getDisplayBalance(stackedBomb);
         onWithdraw(amount);
@@ -54,7 +60,7 @@ const BombFarms = () => {
                 </div>
                 <div className="boardroomFunctions">
                     <div>
-                        <button className="button boardroomDeposit" >Deposit <img style={{height:"18px", width:"18px", backgroundColor:"#6C9BCF", marginLeft:"3px"}} alt="img" src="https://img.icons8.com/?size=512&id=100000&format=png"/></button>
+                        <button className="button boardroomDeposit" onClick={handleDepositClick}>Deposit <img style={{height:"18px", width:"18px", backgroundColor:"#6C9BCF", marginLeft:"3px"}} alt="img" src="https://img.icons8.com/?size=512&id=100000&format=png"/></button>
 
                         <button className="button boardroomWithdraw" onClick={handleWithdrawBomb}>Withdraw <img style={{height:"20px", width:"20px", backgroundColor:"#6C9BCF", marginLeft:"3px"}} alt="img" src="https://img.icons8.com/?size=512&id=102673&format=png"/></button>
 
@@ -94,7 +100,7 @@ const BombFarms = () => {
                 </div>
                 <div className="boardroomFunctions">
                     <div>
-                        <button className="button boardroomDeposit" >Deposit <img style={{height:"18px", width:"18px", backgroundColor:"#6C9BCF", marginLeft:"3px"}} alt="img" src="https://img.icons8.com/?size=512&id=100000&format=png"/></button>
+                        <button className="button boardroomDeposit" onClick={handleDepositClick}>Deposit <img style={{height:"18px", width:"18px", backgroundColor:"#6C9BCF", marginLeft:"3px"}} alt="img" src="https://img.icons8.com/?size=512&id=100000&format=png"/></button>
 
                         <button className="button boardroomWithdraw" onClick={handleWithdrawBomb}>Withdraw <img style={{height:"20px", width:"20px", backgroundColor:"#6C9BCF", marginLeft:"3px"}} alt="img" src="https://img.icons8.com/?size=512&id=102673&format=png"/></button>
 
